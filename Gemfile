@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails'
 
-gem 'mysql2'
 gem 'json'
 
 # Gems used only for assets and not required
@@ -15,11 +14,15 @@ end
 
 gem 'jquery-rails'
 
+gem "pg", :group => :production
+
 group :development do
   gem 'ruby-debug'
+  gem 'heroku_san'
 end
 
 group :test, :development do
+  gem 'mysql2'
   gem 'rspec-rails'
 end
 
