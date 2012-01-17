@@ -19,6 +19,7 @@ gem "pg", :group => :production
 group :development do
   gem 'ruby-debug'
   gem 'heroku_san'
+  gem 'twitter-bootstrap-rails'
 end
 
 group :test, :development do
