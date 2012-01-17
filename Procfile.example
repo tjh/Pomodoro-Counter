@@ -1,0 +1,2 @@
+test:   watchr config/watchr/tests.watchr
+server: passenger start

@@ -20,6 +20,9 @@ group :development do
   gem 'ruby-debug'
   gem 'heroku_san'
   gem 'twitter-bootstrap-rails'
+  gem 'watchr'
+  gem 'foreman'
+  gem 'passenger'
 end
 
 group :test, :development do
