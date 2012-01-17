@@ -5,7 +5,8 @@ Feature: User accounts
 
   Scenario: Join the site, setting up an account
     When I go through the join process
-    Then I should be on the user dashboard page
+    Then I should be on the user profile page
+    And I should see "Edit User"
 
   Scenario: Manage profile
     Given I am logged in

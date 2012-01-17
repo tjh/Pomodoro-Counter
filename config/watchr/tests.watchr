@@ -17,8 +17,9 @@ watch("app/(.*/.*).rb") do |match|
   run_spec %{spec/#{match[1]}_spec.rb}
 end
 
-def run_feature(feature)
+def run_feature(feature = '')
   system "bundle exec cucumber -c #{feature}"
 end
 
 watch('features/.*\.feature') { |m| run_feature m[0] }
+watch('features/step_definitions/.*.rb') { |m| run_feature }

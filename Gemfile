@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails'
 
+gem 'devise'
 gem 'json'
 
 # Gems used only for assets and not required
