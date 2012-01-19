@@ -11,6 +11,12 @@ class EntriesController < ApplicationController
   end
 
   def create
+    @entry = Entry.new params[:entry].merge(:user_id => current_user.id)
+    if @entry.save
+      redirect_to entries_path
+    else
+      render :action => :new
+    end
   end
 
   def update
