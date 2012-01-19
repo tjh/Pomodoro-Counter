@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#entries' do
+    it 'should associate one or more entries' do
+      user = User.new
+      user.entries.build
+      user.entries.empty?.should be_false
+    end
+  end
 end

@@ -1,0 +1,18 @@
+<h1>Pomodoro Entries</h1>
+
+<p><%= link_to 'New entry', new_entry_path, :class => 'btn success' %></p>
+
+<% if @entries.present? %>
+  <table>
+  <% @entries.each do |entry| %>
+    <tr>
+      <td><%= entry.timestamp %></td>
+      <td><%= entry.length %></td>
+    </tr>
+  <% end -%>
+  </table>
+<% else -%>
+  <p>You have no Pomodoro entries</p>
+<% end -%>
+
+

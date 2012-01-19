@@ -89,14 +89,10 @@
             <% if user_signed_in? -%>
               <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
             <% else -%>
+              <li><%= link_to 'Sign In', new_user_session_path %></li>
               <li><%= link_to 'Join Now', new_user_registration_path %></li>
             <% end -%>
           </ul>
-          <form action="" class="pull-right">
-            <input class="input-small" type="text" placeholder="Username">
-            <input class="input-small" type="password" placeholder="Password">
-            <button class="btn" type="submit">Sign in</button>
-          </form>
         </div>
       </div>
     </div>
