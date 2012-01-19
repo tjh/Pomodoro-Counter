@@ -8,6 +8,7 @@
     <tr>
       <td><%= entry.timestamp %></td>
       <td><%= entry.length %></td>
+      <td><%= link_to 'Delete', entry_path(entry), :class => 'btn danger', :method => 'delete', :confirm => 'Are you sure?' %></td>
     </tr>
   <% end -%>
   </table>

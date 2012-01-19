@@ -105,8 +105,12 @@
         </div>
         <div class="row">
           <div class="span10">
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
+            <% flash.each do |type, message| %>
+              <div class="alert-message fade in <%= twitterized_type(type) %>" data-alert="alert">
+                <a class="close" href="#">×</a>
+                <p><%= message %></p>
+              </div>
+            <% end -%>
 
             <% if current_user %>
               <p>Hi <%= current_user.email %></p>

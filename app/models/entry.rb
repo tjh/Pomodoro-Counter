@@ -6,7 +6,8 @@ class Entry < ActiveRecord::Base
   private
 
     def set_default_values
-      self.length ||= 25
+      self.length    ||= 25
+      self.timestamp ||= Time.now
     end
 
 end

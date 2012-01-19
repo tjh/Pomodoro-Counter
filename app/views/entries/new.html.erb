@@ -1,7 +1,7 @@
 <h1>New Pomodoro entry</h1>
 
 <%= semantic_form_for @entry do |form| %>
-  <%= form.input :timestamp, :as => :date %>
+  <%= form.input :timestamp, :as => :string %>
   <%= form.input :length %>
   <%= form.submit %>
 <% end -%>
